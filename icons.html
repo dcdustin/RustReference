@@ -182,7 +182,7 @@
 
                 const imgWrap = document.createElement('div');
                 const img = document.createElement('img');
-                img.src = `./icons/${icon}/${file || icon}.png`;
+                img.src = encodeURI(`./icons/${icon}/${file || icon}.png`);
                 img.alt = `${icon} icon`;
                 // img.className = uiWhiteIcons.includes(icon) ? 'invert' : '';
 
