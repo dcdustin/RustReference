@@ -1,0 +1,193 @@
+@import url(https://fonts.bunny.net/css?family=roboto:400,500,700,900|roboto-mono:300,400);
+
+*, *:before, *:after { box-sizing: border-box; }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #242424;
+}
+
+.icons-ui {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+
+    header {
+        container-type: scroll-state;
+        position: sticky;
+        top: 0px;
+        z-index: 5;
+        background: #f4f4f4;
+
+        > div {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 2px solid transparent;
+
+            transition: all 0.18s ease-in-out;
+
+            h1 {
+                font-size: 30px;
+                line-height: 1.1;
+                margin: 0;
+                padding: 0;
+                font-weight: 900
+
+                transition: all 0.18s ease-in-out;
+            }
+
+            > div {
+                display: flex;
+                justify-content: end;
+                gap: 5px;
+
+                input[type="search"] {
+                    border: 2px solid transparent;
+                    height: 42px;
+                    min-width: 300px;
+                    padding: 0 10px;
+                    font-size: 16px;
+                    font-family: 'Roboto', sans-serif;
+                    transition: border-color 0.18s ease-in-out;
+    
+                    &:focus {
+                        border: 2px solid #00000022;
+                        outline: none;
+                    }
+                }
+
+                .inverter {
+                    width: 36px;
+                    height: auto;
+                    fill: #333;
+                    cursor: pointer;
+                    padding-inline: 6px;
+                    margin-block: 2px;
+                    border-radius: 0.25rem;
+                    transition: 0.1s ease-in-out;
+
+                    &:hover {
+                        fill: #333;
+                        background-color: #ddd;
+                    }
+
+                    .open { display: inline; }
+                    .closed { display: none; }
+                }
+            }
+
+            @container scroll-state(stuck: top) {
+                box-shadow: 0 2px 3px -3px rgba(51, 51, 51, 0.667);
+
+                h1 {
+                    font-size: 24px;
+                }
+
+                input {
+                    background: #fff;
+
+                    &:focus {
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+
+    &.invert {
+        .inverter {
+            background-color: #333 !important;
+            fill: #ddd !important;
+
+            .open {
+                display: none;
+            }
+            .closed {
+                display: inline;
+            }
+        }
+
+        .icons-list {
+            > div {
+                img {
+                    filter: brightness(0);
+                }
+            }
+        }
+    }
+}
+
+.icons-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    grid-gap: 10px;
+    padding-inline: 10px;
+
+    > div {
+        padding: 0 20px;
+        place-content: center;
+        background-color: #aaa;
+        border-radius: 0.25rem;
+        min-height: 64px;
+
+        &:nth-child(odd) {
+            font-family: "Roboto Mono",monospace;
+            font-weight: 400;
+            background-color: #eee;
+            grid-column: 1 / 4;
+            cursor: pointer;
+            position: relative;
+
+            &:hover {
+                background-color: #ddd;
+            }
+
+            &:before {
+                content: 'COPIED';
+                position: absolute;
+                width: fit-content;
+                right: 8px;
+                color: #fff;
+                font-size: 15px;
+                font-weight: 400;
+                font-family: "Roboto", sans-serif;
+                padding: 4px 6px 4px 26px;
+                background: #333 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMjA4IDBoMTI0LjFBNDggNDggMCAwIDEgMzY2IDE0LjFMNDMzLjkgODJhNDggNDggMCAwIDEgMTQuMSAzMy45VjMzNmE0OCA0OCAwIDAgMS00OCA0OEgyMDhhNDggNDggMCAwIDEtNDgtNDhWNDhhNDggNDggMCAwIDEgNDgtNDh6TTQ4IDEyOGg4MHY2NEg2NHYyNTZoMTkydi0zMmg2NHY0OGE0OCA0OCAwIDAgMS00OCA0OEg0OGE0OCA0OCAwIDAgMS00OC00OFYxNzZhNDggNDggMCAwIDEgNDgtNDh6Ii8+PC9zdmc+") no-repeat center left 6px;
+                background-size: 14px 14px;
+                opacity: 0;
+                border-radius: 0.25rem;
+                transition: opacity 0.08s ease-in;
+            }
+
+            &.selected:before {
+                opacity: 1;
+            }
+        }
+
+        &:nth-child(even) {
+            grid-column: 4 / 5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+
+            img {
+                max-height: 48px;
+                max-width: 150px;
+            }
+        }
+
+        &.file-path::selection {
+            background: #00000055;
+        }
+    }
+}

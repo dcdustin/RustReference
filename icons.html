@@ -4,195 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rust UI Icons</title>
-    <style>
-        @import url(https://fonts.bunny.net/css?family=roboto-flex:400|roboto-mono:400);
-
-        *, *:before, *:after { box-sizing: border-box; }
-
-        body {
-            font-family: 'Roboto Flex', sans-serif;
-            font-size: 17px;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-
-        .icons-ui {
-            max-width: 800px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        header {
-            display: flex;
-            gap: 10px;
-            justify-content: space-between;
-            align-items: end;
-
-            h1 {
-                line-height: 1;
-                margin-bottom: 0;
-            }
-
-            input {
-                border: 2px solid transparent;
-                height: 42px;
-                min-width: 300px;
-                padding: 0 10px;
-                font-size: 16px;
-                font-family: 'Roboto Flex', sans-serif;
-                transition: border-color 0.1s ease-in-out;
-
-                &:focus {
-                    border: 2px solid #00000022;
-                    outline: none;
-                }
-            }
-        }
-
-        .icons-list {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(100px, 1fr));
-            grid-gap: 10px;
-
-            > div {
-                padding: 20px;
-                place-content: center;
-                background-color: #aaa;
-                border-radius: 0.25rem;
-                min-height: 104px;
-
-                &:nth-child(odd) {
-                    font-family: 'Roboto Mono', monospace;
-                    background-color: #eee;
-                    grid-column: 1 / 4;
-                    cursor: pointer;
-                    position: relative;
-
-                    &:hover {
-                        background-color: #ddd;
-                    }
-
-                    &:before {
-                        content: '';
-                        position: absolute;
-                        inset: 0;
-                        background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48cGF0aCBmaWxsPSIjMzMzIiBkPSJNMjA4IDBoMTI0LjFBNDggNDggMCAwIDEgMzY2IDE0LjFMNDMzLjkgODJhNDggNDggMCAwIDEgMTQuMSAzMy45VjMzNmE0OCA0OCAwIDAgMS00OCA0OEgyMDhhNDggNDggMCAwIDEtNDgtNDhWNDhhNDggNDggMCAwIDEgNDgtNDh6TTQ4IDEyOGg4MHY2NEg2NHYyNTZoMTkydi0zMmg2NHY0OGE0OCA0OCAwIDAgMS00OCA0OEg0OGE0OCA0OCAwIDAgMS00OC00OFYxNzZhNDggNDggMCAwIDEgNDgtNDh6Ii8+PC9zdmc+") no-repeat center right 10px;
-                        background-size: 20px 20px;
-                        opacity: 0;
-                        transition: opacity 0.15s ease-in-out;
-                    }
-
-                    &.selected:before {
-                        opacity: 1;
-                    }
-                }
-
-                &:nth-child(even) {
-                    grid-column: 4 / 5;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    user-select: none;
-
-                    img {
-                        max-height: 64px;
-                        max-width: 150px;
-
-                        &.invert {
-                            filter: invert(1);
-                        }
-                    }
-                }
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./icons.css">
 </head>
 <body>
 
     <div class="icons-ui">
         <header>
-            <h1>
-                Rust UI Icons
-            </h1>
             <div>
-                <input name="searcher" type="search" placeholder="Search icons...">
+                <h1>RUST UI ICONS</h1>
+                <div>
+                    <input name="searcher" type="search" placeholder="Search icons...">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="inverter">
+                        <path class="open" d="M320 96C161.6 96 62 245.3 32 320C62 394.7 161.6 544 320 544C478.4 544 578 394.7 608 320C578 245.3 478.4 96 320 96zM176 320C176 240.5 240.5 176 320 176C399.5 176 464 240.5 464 320C464 399.5 399.5 464 320 464C240.5 464 176 399.5 176 320zM320 416C373 416 416 373 416 320C416 267 373 224 320 224L320 320L224 320C224 373 267 416 320 416z"/>
+                        <path class="closed" d="M81.3 47.1L64.3 30.1L30.4 64L47.4 81L559.4 593L576.4 610L610.3 576.1L593.3 559.1L502.9 468.7C556.6 420.5 592.2 359.7 608.1 320C578.1 245.3 478.5 96 320.1 96C264.5 96 216.2 114.4 175.6 141.5L81.3 47.1zM236.7 202.6C260.2 185.9 289 176 320.1 176C399.6 176 464.1 240.5 464.1 320C464.1 351.1 454.3 379.9 437.5 403.4L402.8 368.7C411.2 354.4 416.1 337.8 416.1 320C416.1 267 373.1 224 320.1 224C302.3 224 285.7 228.8 271.4 237.3L236.7 202.6zM357.4 459.1C345.5 462.3 333 464 320.1 464C240.6 464 176.1 399.5 176.1 320C176.1 307.1 177.8 294.6 181 282.7L103.8 205.5C68.6 245.9 44.5 289.3 32.1 320C62.1 394.7 161.7 544 320.1 544C356.9 544 390.6 535.9 420.9 522.6L357.4 459.1z"/>
+                    </svg>
+                </div>
             </div>
         </header>
         <div class="icons-list"></div>
     </div>
 
-<script>
-    const listElem = document.querySelector('.icons-list');
-    const searcher = document.querySelector('input[name="searcher"]');
-
-    let searchTerm = "";
-    let UiIcons = ["add", "air_tank0", "air_tank1", "air_tank2", "air_tank3", "air_tank4", "air_tank5", "alert_edit", "ammunition", "arrow_right", "authorize", "backpack", "bite", "bleeding", "blueprint", "blueprint_underlay", "blunt:blunt_0", "boosts", "boosts_bright", "bp-lock", "broadcast", "brush", "build/stairs", "build/wall.doorway.door", "build/wall.window.bars", "bullet", "cable", "cards", "cargo_ship_body", "cart", "change_code", "check", "chevron_down", "chevron_right:chevron_right_0", "chicken", "chinook_map_blades", "chinook_map_body", "cinematic/film-reel", "cinematic/film-slate-clapper", "circle_closed", "circle_closed_toedge:circle_closed_toEdge", "circle_closed_white", "circle_closed_white_toedge:circle_closed_white_toEdge", "circle_gradient", "circle_open", "circle_open_thick", "clan", "clear", "clear_list", "close", "close_door", "clothing", "cold", "community_servers", "connection", "construction", "cooking", "crate", "cup_water", "deauthorize", "demolish", "demolish_cancel", "demolish_immediate", "descend", "device_add", "dir_left", "dir_right", "discord", "discord 1", "download", "drone", "drop", "drowning", "eat", "electric:electric_0", "elevator_call", "elevator_down", "elevator_up", "embrella", "embrella_bright", "enter", "equip_hood", "eraser", "examine", "exit", "explosion", "explosion_sprite", "extinguish", "facebook", "facebook-box", "facepunch", "fall", "farming/icon_age", "farming/icon_genetics", "farming/icon_ground", "farming/icon_light", "farming/icon_overall", "farming/icon_stage", "farming/icon_temperature", "farming/icon_water-intake", "farming/icon_water-saturation", "farming/icon_yield", "farming/white:White", "favourite_active:Favourite_active", "favourite_inactive:Favourite_inactive", "favourite_servers", "ferry", "file", "fire", "flags/af", "flags/ar", "flags/ca", "flags/cs", "flags/da", "flags/de", "flags/el", "flags/en", "flags/en-pt:en-PT", "flags/es-es:es-ES", "flags/fi", "flags/fr", "flags/he", "flags/hu", "flags/it", "flags/ja", "flags/ko", "flags/nl", "flags/no", "flags/pl", "flags/pt-br:pt-BR", "flags/pt-pt:pt-PT", "flags/ro", "flags/ru", "flags/sr", "flags/sv-se:sv-SE", "flags/tr", "flags/uk", "flags/vi", "flags/zh-cn:zh-CN", "flags/zh-tw:zh-TW", "fog:fog_4", "folder", "folder_up", "food_cooked", "food_raw", "fork_and_spoon", "freezing", "freezing-white", "friends_servers", "fun", "fun_alt", "gear", "gem", "gem2", "gem3", "gestures/gesture_rock-paper-scissors", "gestures/gesture_rps_paper", "gestures/gesture_rps_rock", "gestures/gesture_rps_scissors", "gestures/gesture-beat-chest", "gestures/gesture-clap", "gestures/gesture-cut-throat", "gestures/gesture-double-middle-finger", "gestures/gesture-eyes-on-you", "gestures/gesture-finger-gun", "gestures/gesture-frame", "gestures/gesture-friendly", "gestures/gesture-hurry", "gestures/gesture-knuckles-crack", "gestures/gesture-loser", "gestures/gesture-middle-finger", "gestures/gesture-no-no", "gestures/gesture-ok", "gestures/gesture-ok-2", "gestures/gesture-point", "gestures/gesture-raise-the-roof", "gestures/gesture-shrug", "gestures/gesture-shush", "gestures/gesture-shushing", "gestures/gesture-shushing-2", "gestures/gesture-silly-dance-1", "gestures/gesture-silly-dance-1-alternative", "gestures/gesture-silly-dance-2", "gestures/gesture-silly-dance-2-alternative", "gestures/gesture-thumbs-down", "gestures/gesture-thumbs-up", "gestures/gesture-victory", "gestures/gesture-watchingyou", "gestures/gesture-wave", "gestures/gesture-wind-up-middle", "greyout", "greyout_large", "hand-looting", "handlebar", "health", "heart", "heart-white", "history_servers", "home", "home_bright", "horse_ride", "horse_ride_2", "hot", "hurry", "icon_clear", "icon_firework", "icon_firework_disabled", "icon_map_traveling-vendor", "icon_map_traveling-vendor (2)", "icon_map_traveling-vendor_alt", "icon_pixel_camera", "icon-locked", "icon-map", "icon-patrol-helicopter", "icon-submarine", "icon-unlocked", "icon-water-1", "icon-water-2", "icon-water-3", "icon-water-4", "icon-water-5", "icon-water-6", "icon-water-7", "icon-water-8", "ignite:ignite_0", "info", "input", "instagram-logo", "inventory", "isbroken", "iscooking", "isloading", "isonfire", "joystick", "key", "kick", "knock_door", "lan_servers", "level:level_0", "level_metal", "level_stone", "level_top", "level_wood", "lick", "light", "light_campfire", "lightbulb", "lightbulb-white", "link", "link_break", "loading", "loading_white", "lock", "loot", "lungs", "map-tunnel", "maparrow", "markers/marker_a", "markers/marker_b", "markers/marker_c", "market", "maximum", "meat", "medical", "menu_dots", "modded_servers", "nextframe", "no_sleep", "no_spawn", "occupied", "open", "open_door", "ore", "output", "oxygen", "palette", "peace", "pet_assist", "pet_combat", "pet_destroy", "pet_follow", "pet_guard", "pet_idle", "pet_move", "pet_pvp", "phone", "picked up:noun_Download_1015668_0", "pickup", "picture", "pills", "player_assist", "player_carry", "player_loot", "plug-off", "plug-on", "poison", "poof:poof_0", "portion", "power", "premium_background", "premium_facepunch_icon", "press", "prevframe", "radiation", "rain", "reddit", "refresh", "refresh_filled", "remove_cuffs", "remove_hood", "resource", "rf_on", "rocket", "rotate", "rust", "safe zone:safe zone_0", "save", "security:security_0", "shadow", "shrug", "sign", "skull:skull_0", "slash", "sleeping", "sleepingbag", "square", "square_gradient", "square_gradient_sliced", "stab", "star", "steam", "stopwatch", "store", "study", "submarine0", "submarine1", "submarine2", "submarine3", "submarine4", "submarine5", "subtract", "swing", "target", "terrain", "throw_back", "thumbsup", "tools", "train", "translate", "traps", "tree-fire", "triangle:triangle_0", "triangle_white", "tweeter:tweeter_0", "twitter", "twitter 1", "unload", "unlock", "upgrade", "victory", "voice", "vote_down", "vote_up", "warning", "warning_2", "waving", "weapon", "web", "wet", "whoa", "workshop", "xp", "yt_icon_rgb"];
-    let uiWhiteIcons = ["backpack", "boosts_bright", "chevron_down", "circle_closed_white", "circle_closed_white_toEdge", "embrella_bright", "eraser", "farming/icon_age", "farming/icon_genetics", "farming/icon_ground", "farming/icon_light", "farming/icon_overall", "farming/icon_stage", "farming/icon_temperature", "farming/icon_water-intake", "farming/icon_water-saturation", "farming/icon_yield", "farming/white", "fire", "food_cooked", "food_raw", "freezing-white", "gem", "gem2", "gem3", "hand-looting", "heart-white", "home_bright", "icon-locked", "icon-map", "icon-submarine", "isonfire", "lightbulb-white", "loading_white", "map-tunnel", "ore", "output", "picture", "plug-off", "plug-on", "rf_on", "train", "tree-fire", "triangle_white", "icon-water-1", "icon-water-2", "icon-water-3", "icon-water-4", "icon-water-5", "icon-water-6", "icon-water-7", "icon-water-8"];
-    let tiles = ["greyout", "greyout_large"];
-
-    window.addEventListener('DOMContentLoaded', () => {
-        drawIconTable();
-
-        listElem.addEventListener('click', async (event) => {
-            const selection = window.getSelection();
-            const range = document.createRange();
-            let target = event.target.closest('div');
-
-            selection.removeAllRanges();
-            range.selectNodeContents(target);
-            selection.addRange(range);
-
-            try {
-                await navigator.clipboard.writeText(target.textContent);
-                target.classList.add('selected');
-
-                setTimeout(() => { target.classList.remove('selected') }, 2000);
-            }
-            catch(e) {
-                console.error('Failed to copy text: ', e);
-            }
-        });
-
-        searcher
-            .addEventListener('search', (event) => {
-                searchTerm = event.target.value.trim().toLowerCase();
-                listElem.innerHTML = '';
-
-                drawIconTable();
-            }, false);
-    }, false);
-
-
-    function drawIconTable() {
-        const fragment = document.createDocumentFragment();
-
-        UiIcons
-            .filter(icon => searchTerm == "" || icon.includes(searchTerm))
-            .forEach(icon => {
-                [icon, file] = icon.split(':');
-                file = file || (icon.match(/\//) && icon.split('/').pop());
-
-                const elem = document.createElement('div');
-                elem.className = 'file-path';
-                elem.textContent = `assets/icons/${icon}.png`;
-
-                fragment.appendChild(elem);
-
-                const imgWrap = document.createElement('div');
-                const img = document.createElement('img');
-                img.src = encodeURI(`./icons/${icon}/${file || icon}.png`);
-                img.alt = `${icon} icon`;
-                // img.className = uiWhiteIcons.includes(icon) ? 'invert' : '';
-
-                imgWrap.appendChild(img);
-                fragment.appendChild(imgWrap);            
-            });
-
-        listElem.appendChild(fragment);
-    }
-</script>
+    <script src="./icons.js"></script>
 
 </body>
 </html>
